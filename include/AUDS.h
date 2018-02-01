@@ -29,7 +29,14 @@ class AUDS{
          * Push item to structure.
          */
         void push(T item) {
-            currsize++;
+            if (currsize >= init) {
+            
+            } else {
+                data[currsize] = item;
+                std::cout << currsize << std::endl;
+                std::cout << item << std::endl;
+                currsize++;
+            }
             // TODO
         }
         
@@ -38,7 +45,9 @@ class AUDS{
          */
         T pop(){
             currsize--;
-            // TODO
+            std::cout << "current size: " << currsize << std::endl;
+            std::cout << "data in current size: " << data[currsize] << std::endl;
+            return data[currsize];
         }
         
         /*
