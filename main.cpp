@@ -2,15 +2,46 @@
 #include "include/AUDS.h"
 
 int main() {
-    AUDS<char> s;
-    s.push('o');
-    s.push('9');
-    s.push('^');
-    s.push('p');
-    char th = s.pop();
-    std::cout << th << std::endl;
-    char nh = s.pop();
-    std::cout << nh << std::endl;
-    char nn = s.pop();
-    std::cout << nn << std::endl;
+    AUDS<char> st;
+    st.push('%');
+    st.push('*');
+    st.push('^');
+    st.push('&');
+    st.push('#');
+    st.push('@');
+    st.size();
+    std::cout << "testing popping out data..." << std::endl;
+    char a = st.pop();
+    std::cout << "popped out: " << a << std::endl;
+    std::cout << "----------------" << std::endl;
+    std::cout << "testing popping out data..." << std::endl;
+    a = st.pop();
+    std::cout << "popped out: " << a << std::endl;
+    std::cout << "----------------" << std::endl;
+    std::cout << "testing popping out data..." << std::endl;
+    a = st.pop();
+    std::cout << "popped out: " << a << std::endl;
+    std::cout << "----------------" << std::endl;
+    std::cout << "testing popping out data..." << std::endl;
+    a = st.pop();
+    std::cout << "popped out: " << a << std::endl;
+    std::cout << "----------------" << std::endl;
+    st.size();
+    AUDS<char> nt;
+    nt.push('%');
+    nt.push('*');
+    nt.push('^');
+    nt.push('&');
+    nt.push('#');
+    nt.push('@');
+    nt.size();
+    nt.push('^');
+    nt.push('&');
+    nt.push('#');
+    nt.push('@');
+    nt.size();
+    nt.push('0');
+    nt.push('@');
+    nt.size();
+    nt.printAUDS();
 }
